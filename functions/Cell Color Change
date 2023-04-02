@@ -1,0 +1,26 @@
+function CCC() {
+  function onEdit(event) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getActiveSheet();
+  var cell = sheet.getRange("H3:H66"); // Change A1 to the cell you want to check
+  var value = cell.getValue();
+
+  // Set the background color to green if the value is at least 25000
+  if (value >= 1000) {
+    cell.setBackground("green");
+  }
+}
+
+}
+
+function onEdit(event) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getActiveSheet();
+  var cell = sheet.getRange("I9"); // Change A1 to the cell you want to check
+  var value = cell.getValue();
+
+  // Set the background color to green if the value is at least 25000
+  if (value >= 25000) {
+    cell.setBackground("green");
+  }
+}
