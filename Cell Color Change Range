@@ -1,0 +1,12 @@
+function onEdit(e) {
+  var sheet = e.source.getActiveSheet();
+  var range = e.range;
+  if (range.getA1Notation() == "I3:I7") {
+    var values = range.getValues();
+    for (var i = 0; i < values.length; i++) {
+      if (values[i][0] >= 1000) {
+        sheet.getRange(range.getRow() + i, range.getColumn()).setBackground('green');
+      }
+    }
+  }
+}
